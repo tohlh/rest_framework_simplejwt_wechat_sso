@@ -1,0 +1,2 @@
+# rest_framework_simplejwt_wechat_sso
+ WeChat SSO with rest_framework_simplejwt
