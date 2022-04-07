@@ -1,6 +1,6 @@
 # rest_framework_simplejwt_wechat_sso
 
-This is a modified version `rest_framework_simplejwt` library. It includes WeChat SSO.
+This is a modified version [`rest_framework_simplejwt`](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/) library that includes WeChat SSO.
 Reason that I made this is because I needed WeChat SSO functionality in my school project.
 
 To use it, download and copy the entire project folder of `rest_framework_simplejwt_wechat_sso` to the root of your Django project.
