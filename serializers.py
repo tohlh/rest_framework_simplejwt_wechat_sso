@@ -36,7 +36,6 @@ class TokenObtainSerializer(serializers.Serializer):
 
     def validate(self, attrs):
         wechat_code = attrs["code"]
-        print(wechat_code)
         wechat_result = self.WeChatSSO(wechat_code)
         self.create_or_get_user(wechat_result["openid"])
 
@@ -64,19 +63,9 @@ class TokenObtainSerializer(serializers.Serializer):
         return cls.token_class.for_user(user)
 
     def WeChatSSO(cls, code):
-        if code == "superuser123":
-            return {
-                "access_token": "ACCESS_TOKEN",
-                "expires_in": 7200,
-                "refresh_token": "REFRESH_TOKEN",
-                "openid": "superuseropenid123123123",
-                "scope": "SCOPE",
-                "unionid": "o6_bmasdasdsad6_2sgVt7hMZOPfL"
-            }
-
         req_params = {
-            'appid': settings.APP_ID,
-            'secret': settings.APP_SECRET,
+            'appid': api_settings.WECHAT_APP_ID,
+            'secret': api_settings.WECHAT_APP_SECRET,
             'js_code': code,
             'grant_type': 'authorization_code'
         }

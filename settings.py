@@ -40,6 +40,8 @@ DEFAULTS = {
     "TOKEN_BLACKLIST_SERIALIZER": "rest_framework_simplejwt_wechat_sso.serializers.TokenBlacklistSerializer",
     "SLIDING_TOKEN_OBTAIN_SERIALIZER": "rest_framework_simplejwt_wechat_sso.serializers.TokenObtainSlidingSerializer",
     "SLIDING_TOKEN_REFRESH_SERIALIZER": "rest_framework_simplejwt_wechat_sso.serializers.TokenRefreshSlidingSerializer",
+    "WECHAT_APP_ID": "",
+    "WECHAT_APP_SECRET": "",
 }
 
 IMPORT_STRINGS = (
